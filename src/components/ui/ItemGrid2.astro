@@ -47,24 +47,20 @@ const {
         }) => (
           <div
             class={twMerge(
-              "relative flex flex-col",
+              "relative flex p-5 sm:p-6 lg:p-8 flex-col overflow-hidden",
               panelClass,
               itemClasses?.panel
             )}
           >
             {(icon || defaultIcon) && (
-              <Icon
-                name={icon || defaultIcon}
-                class={twMerge(
-                  "mb-2 w-10 h-10",
-                  defaultIconClass,
-                  itemClasses?.icon
-                )}
-              />
+           
+               <img src={icon || defaultIcon} alt="asa" class="mb-2 w-10 h-auto" />
+
+             
             )}
             <div
               class={twMerge(
-                "text-xl font-bold",
+                "text-lg md:text-xl font-semibold text-heading-2",
                 titleClass,
                 itemClasses?.title
               )}
@@ -74,7 +70,7 @@ const {
             {description && (
               <p
                 class={twMerge(
-                  "text-muted mt-2",
+                  "text-lg leading-7 mt-4",
                   descriptionClass,
                   itemClasses?.description
                 )}
@@ -85,7 +81,8 @@ const {
               <div class="mt-2">
                 <Button {...callToAction} />
               </div>
-            )}
+            )}<span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-[#ff64311a]/10 rounded-full"></span>
+
           </div>
         )
       )}
