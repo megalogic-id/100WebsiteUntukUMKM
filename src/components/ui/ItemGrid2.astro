@@ -53,8 +53,11 @@ const {
             )}
           >
             {(icon || defaultIcon) && (
-           
-               <img src={icon || defaultIcon} alt="asa" class="mb-2 w-10 h-auto" />
+              <div class="rounded-xl bg-gray-300 mb-7 dark:bg-orange-500 p-3 text-heading-1 w-max relative">
+    <span>
+      <img src={icon || defaultIcon} alt=`Logo ${title}` class=" w-10 h-auto" />
+              </span>
+  </div>
 
              
             )}
