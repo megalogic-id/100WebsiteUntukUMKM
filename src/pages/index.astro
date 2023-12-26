@@ -16,6 +16,22 @@ const metadata = {
   title: "AstroWind — Free template for creating websites with Astro + Tailwind CSS",
   ignoreTitleTemplate: true,
 };
+
+import { getImage } from "astro:assets";
+import Mega from "~/assets/mega.svg"
+const Brainlogic =  await getImage({
+	src: "https://algo-network.vercel.app/logos/Braincore.png",
+	format: "webp",
+	width: 60,
+	height: 60,
+});
+const Bizzagi = await getImage({
+	src: "https://algo-network.vercel.app/logos/BIZZAGI.png",
+	format: "webp",
+	width: 60,
+	height: 60,
+});
+
 ---
 
 <Layout metadata={metadata}>
@@ -231,62 +247,31 @@ const metadata = {
   />
 
   <!-- Features2 Widget ************** -->
-
   <Features2
     title="Kerja Sama"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    subtitle="Ada beberapa unit bisnis yang menawarkan berbagai produk dan layanan."
+    tagline="Strong"
     items={[
       {
         title: "Braincore",
         description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: "flat-color-icons:template",
+        icon: Brainlogic.src,
       },
       {
-        title: "Heros",
-        description: "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: "flat-color-icons:gallery",
+        title: "Megalogic",
+        description: "A typical software house that create application on Frontend, Backend, and Mobile",
+        icon: Mega.src,
       },
       {
-        title: "Features",
-        description: "Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!",
-        icon: "flat-color-icons:approval",
+        title: "Bizzagi",
+        description: "A digital marketing agency that handle a various services like advertising, SEO, and content creation",
+        icon: Bizzagi.src,
       },
-      {
-        title: "Content",
-        description: "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: "flat-color-icons:document",
-      },
-      {
-        title: "Call-to-Action",
-        description: "That enthusiastic friend who's always urging, \"Do it! Do it!\"? Yeah, that's this button nudging you towards adventure.",
-        icon: "flat-color-icons:advertising",
-      },
-      {
-        title: "Pricing",
-        description: "Behold the dessert menu of the website world. Tempting choices await, can you resist?",
-        icon: "flat-color-icons:currency-exchange",
-      },
-      {
-        title: "Testimonial",
-        description: "Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.",
-        icon: "flat-color-icons:voice-presentation",
-      },
-      {
-        title: "Contact",
-        description: "Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.",
-        icon: "flat-color-icons:business-contact",
-      },
-      {
-        title: "Footers",
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: "flat-color-icons:database",
-      },
+      
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+  <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+
   </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
