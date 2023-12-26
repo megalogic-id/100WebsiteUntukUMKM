@@ -84,4 +84,8 @@ export default defineConfig({
       },
     },
   },
+  image: {
+    domains: ["algo-network.vercel.app"],
+    remotePatterns: [{ protocol: "https" }]
+  }
 });
