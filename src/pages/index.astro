@@ -18,20 +18,30 @@ const metadata = {
 };
 
 import { getImage } from "astro:assets";
-import Mega from "~/assets/mega.svg"
-const Brainlogic =  await getImage({
-	src: "https://algo-network.vercel.app/logos/Braincore.png",
-	format: "webp",
-	width: 60,
-	height: 60,
+const Brainlogic = await getImage({
+  src: "/src/assets/images/logo/braincore.png",
+  format: "webp",
+  width: 60,
+  height: 60,
+});
+const Mega = await getImage({
+  src: "/src/assets/images/logo/megalogic.png",
+  format: "webp",
+  width: 60,
+  height: 60,
 });
 const Bizzagi = await getImage({
-	src: "https://algo-network.vercel.app/logos/BIZZAGI.png",
-	format: "webp",
-	width: 60,
-	height: 60,
+  src: "/src/assets/images/logo/bizzagi.png",
+  format: "webp",
+  width: 60,
+  height: 60,
 });
-
+const HaloTSM = await getImage({
+  src: "/src/assets/images/logo/halo_tsm.jpg",
+  format: "webp",
+  width: 60,
+  height: 60,
+});
 ---
 
 <Layout metadata={metadata}>
@@ -40,15 +50,12 @@ const Bizzagi = await getImage({
   <Hero
     actions={[
       {
-        variant: "primary",
-        text: "Get template",
+        text: "Daftar Disini",
         href: "https://github.com/onwidget/astrowind",
         target: "_blank",
-        icon: "tabler:download",
       },
-      { text: "Learn more", href: "#features" },
     ]}
-    image={{ src: "~/assets/images/hero.png", alt: "100WebsiteUntukUMKM Hero Image" }}
+    image={{ src: "~/assets/images/100WebsiteUMKM Cover Image.png", alt: "100WebsiteUntukUMKM Hero Image" }}
   >
     <Fragment slot="title">
       Sebuah Kampanye <span class="hidden xl:inline dark:text-blue-200">#100WebsiteUntukUMKM</span>
@@ -66,47 +73,37 @@ const Bizzagi = await getImage({
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
   <Note />
-
-  <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    tagline="Keuntungan"
+    title="Apa yang akan Kamu Dapatkan dengan Mendaftar di #100WebsiteUntukUMKM"
+    subtitle="Dengan mendaftar di campaign ini, Anda akan mendapatkan berbagai manfaat yang dapat meningkatkan potensi dan kredibilitas bisnis Anda di era digital."
     items={[
       {
-        title: "Astro + Tailwind CSS Integration",
-        description: "A seamless integration between two great frameworks that offer high productivity, performance and versatility.",
-        icon: "tabler:brand-tailwind",
+        title: "Pengembangan Situs Web Personalized",
+        description: "Dapatkan situs web yang disesuaikan sepenuhnya untuk menampilkan penawaran, produk, dan layanan unik dari UMKM Anda.",
       },
       {
-        title: "Ready-to-use Components",
-        description: "Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...",
-        icon: "tabler:components",
+        title: "Peningkatan Kehadiran Digital",
+        description: "Bangun kehadiran online yang kuat untuk bisnis Anda dengan situs web profesional yang dikembangkan khusus untuk UMKM.",
       },
       {
-        title: "Best Practices",
-        description: "Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.",
-        icon: "tabler:list-check",
+        title: "Akses Pasar yang Lebih Luas",
+        description: "Fasilitasi akses ke pasar yang lebih luas dengan situs web yang dioptimalkan untuk meningkatkan visibilitas dan jangkauan bisnis Anda.",
       },
       {
-        title: "Excellent Page Speed",
-        description: "Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.",
-        icon: "tabler:rocket",
+        title: "Kesadaran Publik yang Meningkat",
+        description: "Tingkatkan kesadaran publik tentang produk dan layanan Anda melalui situs web yang menarik dan informatif.",
       },
       {
-        title: "Search Engine Optimization (SEO)",
-        description: "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: "tabler:arrows-right-left",
+        title: "Bersaing secara Efektif di Era Digital",
+        description: "Aktifkan bisnis Anda untuk bersaing secara efektif dalam lingkungan digital dengan dukungan situs web yang profesional dan responsif.",
       },
       {
-        title: "Open to new ideas and contributions",
-        description: "Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.",
-        icon: "tabler:bulb",
+        title: "Dukungan Pendaftaran UMKM yang Mudah",
+        description: "Dapatkan bantuan dalam proses pendaftaran UMKM untuk memulai perjalanan digital Anda dengan mudah dan lancar.",
       },
     ]}
   />
@@ -115,20 +112,20 @@ const Bizzagi = await getImage({
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Keunggulan"
+    title="Membantu UMKM mendapatkan website gratis dengan mudah dan cepat."
     items={[
       {
-        title: "Built on top of Astro 4.0",
-        description: "Benefiting from the performance and developer-friendly features of this modern static site generator.",
+        title: "Mudah",
+        description: "Tanpa perlu repot, jelaskan bisnis UMKM kamu melalui form pendaftaran dan kami akan segera menghubungi kamu kembali.",
       },
       {
-        title: "Styled using Tailwind CSS",
-        description: "Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.",
+        title: "Cepat",
+        description: "Pembuatan websiite UMKM hanya membutuhkan waktu beberapa minggu sehingga hemat waktu bagi pelaku UMKM.",
       },
       {
-        title: "Cross-browser compatibility",
-        description: "Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.",
+        title: "Gratis",
+        description: "Selain hemat waktu, pembuatan website UMKM juga tidak membutuhkan biaya apapun, semuanya gratis.",
       },
     ]}
     image={{
@@ -136,80 +133,6 @@ const Bizzagi = await getImage({
       alt: "Colorful Image",
     }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: "High level of customization",
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: "Multiple layout possibilities",
-        description: "Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.",
-      },
-      {
-        title: "Fully responsive design",
-        description: "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: "Integration of media",
-        description: "Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.",
-      },
-    ]}
-    image={{
-      src: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80",
-      alt: "Blueprint Image",
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: "Enhanced user engagement",
-        description: "Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.",
-      },
-      {
-        title: "Continuous improvement",
-        description: "Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.",
-      },
-      {
-        title: "Time and resource efficiency",
-        description: "Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.",
-      },
-      {
-        title: "Community support",
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: "https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Astronauts Image",
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
@@ -218,25 +141,27 @@ const Bizzagi = await getImage({
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Timeline Campaign #100WebsiteUntukUMKM"
     items={[
       {
-        title: '1 - 31 Maret 2024: <span class="font-medium">Registrasi UMKM</span>',
-        description: "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        title: '1 April - 30 April 2024: <span class="font-medium">Registrasi UMKM</span>',
+        description:
+          "Pendaftaran program ini terbuka untuk UMKM mulai dari tanggal 1 hingga 30 April, yang dapat dilakukan secara online melalui platform yang telah disediakan. Meskipun demikian, penting untuk dicatat bahwa pendaftaran ini akan tetap dibuka apabila kuota masih tersedia.",
         icon: "tabler:forms",
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description: "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        title: '1 Mei - 31 Mei 2024: <span class="font-medium">Seleksi UMKM</em>',
+        description: "Tim seleksi akan meninjau pengajuan yang masuk dari UMKM selama bulan Maret. Kriteria seleksi akan mencakup berbagai aspek seperti keberlanjutan bisnis, potensi pertumbuhan, dan dampak sosial ekonomi.",
         icon: "tabler:select",
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description: "Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.",
+        title: '1 Juni - 31 Desember 2024: <span class="font-medium">Pengembangan Website</span>',
+        description:
+          "Tim pengembangan akan membuat situs web untuk mendukung UMKM terpilih. Proses meliputi desain, konten, dan integrasi fitur relevan. Peluncuran direncanakan pada akhir tahun setelah pengujian dan penyesuaian dari UMKM terpilih.",
         icon: "tabler:rocket",
       },
       {
-        title: "Ready!",
+        title: "Website selesai dirilis!",
         icon: "tabler:check",
       },
     ]}
@@ -267,11 +192,14 @@ const Bizzagi = await getImage({
         description: "A digital marketing agency that handle a various services like advertising, SEO, and content creation",
         icon: Bizzagi.src,
       },
-      
+      {
+        title: "Halo TSM",
+        description: "Komunitas untuk anak IT networking, cari partner, dan kolaborasi bikin portfolio bareng",
+        icon: HaloTSM.src,
+      },
     ]}
   >
-  <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
-
+    <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
   </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
@@ -295,63 +223,62 @@ const Bizzagi = await getImage({
       {
         title: "Apa itu #100WebsiteUntukUMKM?",
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "#100WebsiteUntukUMKM adalah sebuah inisiatif yang menyediakan 100 situs website gratis yang dapat membantu Usaha Mikro, Kecil, dan Menengah (UMKM) terutama dalam hal meningkatkan jangkauan penjualan. Temukan solusi digital terbaik untuk mengembangkan dan memperluas usaha Anda di era digital dengan bergabung bersama #100WebsiteUntukUMKM.",
       },
       {
         title: "Kenapa saya harus punya website?",
         description:
-          "Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.",
+          "Memiliki website adalah langkah penting dalam meningkatkan visibilitas dan mengembangkan bisnis Anda secara online. Dengan memiliki website, Anda dapat meningkatkan visibilitas, menjangkau pelanggan potensial lebih luas, memberikan informasi tentang produk atau layanan Anda, dan memperkuat citra merek Anda. Temukan manfaat lengkap memiliki website untuk bisnis Anda.",
       },
       {
         title: "Bagaimana caranya agar saya bisa terdaftar untuk dibuatkan website?",
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Untuk bisa bergabung bersama #100websiteuntukUMKM adalah cukup dengan mengisi form pendaftaran pada link di website ini. Daftar sekarang dan jadilah bagian dari perjalanan digital untuk mengembangkan UMKM Anda dengan memiliki website gratis!",
       },
       {
         title: "Apa keuntungan memiliki website?",
-        description: "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+        description:
+          "Memiliki website memberikan keuntungan besar bagi bisnis Anda dengan membuka pintu untuk menjangkau pasar yang lebih luas secara online, meningkatkan visibilitas merek, memperluas jangkauan pemasaran, meningkatkan kredibilitas, dan memungkinkan interaksi yang lebih baik dengan pelanggan. Temukan potensi lengkapnya dengan memiliki website gratis untuk bisnis Anda dengan #100WebsiteUntukUMKM.",
       },
       {
-        title: "What is something that you would like to try again?",
-        description: "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+        title: "Fitur Apa Saja Yang Di Tawarkan?",
+        description: "Dengan bergabung di #100WebsiteUntukUMKM, Anda akan mendapatkan akses ke berbagai fitur yang dirancang khusus untuk mendukung pertumbuhan dan pengembangan Usaha Mikro, Kecil, dan Menengah (UMKM).",
       },
       {
-        title: "If you could only ask one question to each person you meet, what would that question be?",
-        description: "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        title: "Apakah Ada Biaya Terkait Pembuatan dan Pemeliharaan Website?",
+        description: "Dengan layanan pembuatan website gratis, Anda dapat memulai bisnis online Anda tanpa biaya. Pelajari lebih lanjut tentang biaya terkait pembuatan dan pemeliharaan website di sini.",
       },
     ]}
   />
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     stats={[
       { title: "Downloads", amount: "132K" },
       { title: "Stars", amount: "24.8K" },
       { title: "Forks", amount: "10.3K" },
       { title: "Users", amount: "48.4K" },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
     actions={[
       {
-        variant: "primary",
-        text: "Get template",
+        text: "Daftar Sekarang",
         href: "https://github.com/onwidget/astrowind",
         target: "_blank",
-        icon: "tabler:download",
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      <span class="sm:whitespace-nowrap">Tunggu Apa Lagi?</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't waste more time! :P
+      Tingkatkan visibilitas bisnis kamu dengan membuat website gratis di <br class="hidden md:inline" /><strong>#100WebsiteUntukUMKM</strong>
     </Fragment>
   </CallToAction>
 </Layout>
