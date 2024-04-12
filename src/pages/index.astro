@@ -19,25 +19,25 @@ const metadata = {
 
 import { getImage } from "astro:assets";
 const Brainlogic = await getImage({
-  src: "/src/assets/images/logo/braincore.png",
+  src: "https://raw.githubusercontent.com/algonacci/Free-CDN/main/braincore.png",
   format: "webp",
   width: 60,
   height: 60,
 });
 const Mega = await getImage({
-  src: "/src/assets/images/logo/megalogic.png",
+  src: "https://raw.githubusercontent.com/algonacci/Free-CDN/main/megalogic.png",
   format: "webp",
   width: 60,
   height: 60,
 });
 const Bizzagi = await getImage({
-  src: "/src/assets/images/logo/bizzagi.png",
+  src: "https://raw.githubusercontent.com/algonacci/Free-CDN/main/bizzagi.png",
   format: "webp",
   width: 60,
   height: 60,
 });
 const HaloTSM = await getImage({
-  src: "/src/assets/images/logo/halo_tsm.jpg",
+  src: "https://raw.githubusercontent.com/algonacci/Free-CDN/main/halo_tsm.jpg",
   format: "webp",
   width: 60,
   height: 60,
@@ -51,7 +51,7 @@ const HaloTSM = await getImage({
     actions={[
       {
         text: "Daftar Disini",
-        href: "https://github.com/onwidget/astrowind",
+        href: "https://s.id/DaftarWebsiteUMKM",
         target: "_blank",
       },
     ]}
@@ -178,7 +178,7 @@ const HaloTSM = await getImage({
       {
         title: "Braincore",
         description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: "/images/logo/braincore.png",
+        icon: Brainlogic.src,
       },
       {
         title: "Megalogic",

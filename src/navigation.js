@@ -2,7 +2,7 @@ import { getPermalink, getBlogPermalink, getAsset } from "./utils/permalinks";
 
 export const headerData = {
   links: [],
-  actions: [{ text: "Daftar Disini", href: "https://github.com/onwidget/astrowind", target: "_blank" }],
+  actions: [{ text: "Daftar Disini", href: "https://s.id/DaftarWebsiteUMKM", target: "_blank" }],
 };
 
 export const footerData = {
